@@ -50,7 +50,7 @@ For example:
               Final Synthesis
 
 ---
-##📝 Discussion Brief
+## 📝 Discussion Brief
 
 Before starting a discussion, the user provides three key pieces of information.
 
@@ -79,7 +79,7 @@ Introduce alternative interpretations where appropriate.
 These instructions are incorporated into the agents' discussion context.
 
 ---
-##🤖 Discussion Agents
+## 🤖 Discussion Agents
 
 Each discussion agent can be configured independently.
 
@@ -162,7 +162,7 @@ Identify unresolved questions.
 Present the strongest arguments from different perspectives.
 Produce a coherent final synthesis.
 ---
-##🔄 Chairman Fallback
+## 🔄 Chairman Fallback
 
 The Chairman can be configured with a fallback provider/model.
 
@@ -187,7 +187,7 @@ Other API failures
 
 The fallback mechanism is intended to make the discussion more resilient.
 ---
-##🛡️ Provider Failure Handling
+## 🛡️ Provider Failure Handling
 
 A key design principle is that one provider failure should not normally terminate the entire discussion.
 
@@ -203,7 +203,7 @@ The application should continue using the providers that remain available.
 
 Similarly, if an individual discussion agent fails during a round, the application should record the failure and allow the remaining agents to continue where possible.
 ---
-##🔍 Dynamic Model Discovery
+## 🔍 Dynamic Model Discovery
 
 The application discovers available models when it starts.
 
@@ -225,7 +225,7 @@ Models intended for functions such as embeddings, image generation, audio, moder
 
 This approach reduces the need to manually maintain model lists.
 ---
-##🚀 Quick Start
+## 🚀 Quick Start
 1. Clone the Repository
 git clone <YOUR_REPOSITORY_URL>
 cd Mulit_agent_discussion
@@ -285,7 +285,7 @@ cd /d F:\Mulit_agent_discussion
 conda activate F:\conda_envs\Mulit_agent_discussion
 python -m streamlit run app.py
 ---
-##📁 Project Structure
+## 📁 Project Structure
 Mulit_agent_discussion/
 │
 ├── app.py
@@ -340,7 +340,7 @@ description.md
 
 Detailed project architecture, requirements, design principles, and future development plans.
 ---
-##🔐 Security
+## 🔐 Security
 
 Never commit API keys to GitHub.
 
@@ -358,7 +358,7 @@ git status
 
 Make sure no API-key files or other secrets are included.
 ---
-##🧪 Project Status
+## 🧪 Project Status
 
 Active Development
 
@@ -385,7 +385,7 @@ Model cost comparison
 Improved discussion history and replay
 More sophisticated Chairman analysis
 ---
-##📖 Documentation
+## 📖 Documentation
 
 For a more detailed description of the system architecture and design requirements:
 
@@ -395,7 +395,7 @@ For Python dependencies:
 
 View Requirements
 ---
-##🧠 Design Philosophy
+## 🧠 Design Philosophy
 
 The project is intended to be more than a simple multi-chat interface.
 
@@ -430,7 +430,7 @@ Unresolved uncertainty
 
 before the final synthesis is produced.
 ---
-##⚠️ Disclaimer
+## ⚠️ Disclaimer
 
 This is an experimental multi-agent AI discussion framework.
 
