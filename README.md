@@ -49,6 +49,7 @@ For example:
                       ▼
               Final Synthesis
 
+```
 ---
 ## 📝 Discussion Brief
 
