@@ -1,3 +1,5 @@
+
+
 # 🏛️ Multi-Agent Discussion Council
 
 ### A configurable AI council where different models debate, challenge, and synthesize complex questions.
@@ -93,7 +95,7 @@ Characteristics
 
 For example:
 
-🔎 Evidence Analyst
+### 🔎 Evidence Analyst
 
 Focuses on:
 
@@ -103,7 +105,7 @@ Data
 Sources
 Assumptions
 Reliability
-📊 Analytical Lead
+### 📊 Analytical Lead
 
 Focuses on:
 
@@ -111,7 +113,7 @@ Analytical frameworks
 Structured reasoning
 Connecting evidence
 Synthesis
-⚔️ Adversarial Critic
+### ⚔️ Adversarial Critic
 
 Focuses on:
 
@@ -119,7 +121,8 @@ Challenging assumptions
 Identifying weaknesses
 Constructing counterarguments
 Testing conclusions
-🧭 Independent Reviewer
+
+### 🧭 Independent Reviewer
 
 Focuses on:
 
@@ -127,7 +130,7 @@ Logical gaps
 Missing evidence
 Alternative interpretations
 Independent assessment
-💡 Creative Strategist
+### 💡 Creative Strategist
 
 Focuses on:
 
@@ -138,7 +141,7 @@ Non-obvious solutions
 
 These roles are starting defaults and can be expanded as the project develops.
 
-👑 Chairman
+### 👑 Chairman
 
 The Chairman is a separate AI participant responsible for synthesizing the discussion.
 
@@ -153,22 +156,23 @@ The Chairman is not hard-coded to a particular AI provider.
 The Chairman should not simply count votes or select the opinion expressed by the majority.
 
 Instead, it should:
+1. Identify major areas of agreement.
+2. Identify substantive disagreements.
+3. Distinguish factual claims from interpretations.
+4. Identify important assumptions.
+5. Identify weaknesses in the arguments.
+6. Identify unresolved questions.
+7. Present the strongest arguments from different perspectives.
+8. Produce a coherent final synthesis.
 
-Identify major areas of agreement.
-Identify substantive disagreements.
-Distinguish factual claims from interpretations.
-Identify important assumptions.
-Identify weaknesses in the arguments.
-Identify unresolved questions.
-Present the strongest arguments from different perspectives.
-Produce a coherent final synthesis.
 ---
 ## 🔄 Chairman Fallback
 
 The Chairman can be configured with a fallback provider/model.
 
-For example:
 
+For example:
+```text
 Primary Chairman
 OpenRouter / Model A
         │
@@ -176,17 +180,18 @@ OpenRouter / Model A
         ▼
 Fallback Chairman
 Gemini / Model B
-
+```
 This is useful when experimenting with models that may have:
 
-Temporary availability problems
-Rate limits
-Quota limitations
-Credit limitations
-Model availability issues
-Other API failures
+1. Temporary availability problems
+2. Rate limits
+3. Quota limitations
+4. Credit limitations
+5. Model availability issues
+6. Other API failures
 
 The fallback mechanism is intended to make the discussion more resilient.
+
 ---
 ## 🛡️ Provider Failure Handling
 
@@ -203,13 +208,14 @@ OpenAI        → Unavailable
 The application should continue using the providers that remain available.
 
 Similarly, if an individual discussion agent fails during a round, the application should record the failure and allow the remaining agents to continue where possible.
+
 ---
 ## 🔍 Dynamic Model Discovery
 
 The application discovers available models when it starts.
 
 The general process is:
-
+```text
 API Key
    ↓
 Create Provider Client
@@ -221,10 +227,12 @@ Filter Non-Discussion Models
 Available Models
    ↓
 User Selection
+```
 
 Models intended for functions such as embeddings, image generation, audio, moderation, or reranking can be excluded from discussion-model selection.
 
 This approach reduces the need to manually maintain model lists.
+
 ---
 ## 🚀 Quick Start
 1. Clone the Repository
@@ -249,13 +257,14 @@ The Python environment should remain outside the Git repository.
 Run:
 
 pip install -r requirements.txt
+
 4. Configure API Keys
 
 API keys should be stored outside the Git repository.
 
 The current development configuration uses:
 
-F:\API_Keys\api_keys.csv
+\\API_Keys\\api_keys.csv
 
 The expected format is:
 
@@ -285,8 +294,10 @@ For the current Windows development environment:
 cd /d F:\Mulit_agent_discussion
 conda activate F:\conda_envs\Mulit_agent_discussion
 python -m streamlit run app.py
+
 ---
 ## 📁 Project Structure
+```text
 Mulit_agent_discussion/
 │
 ├── app.py
@@ -315,31 +326,33 @@ Mulit_agent_discussion/
 ├── README.md
 ├── description.md
 └── .gitignore
+```
 Main Components
 
-app.py
+#### app.py
 
 Main Streamlit application and discussion orchestration.
 
-config/
+#### config/
 
 Configuration, provider definitions, API-key loading, and agent roles.
 
-providers/
+#### providers/
 
 Provider client initialization and dynamic model discovery.
 
-council/
+#### council/
 
 Discussion logic, agent turns, and Chairman synthesis.
 
-ui/
+#### ui/
 
 Streamlit interface components.
 
-description.md
+#### description.md
 
 Detailed project architecture, requirements, design principles, and future development plans.
+
 ---
 ## 🔐 Security
 
@@ -358,6 +371,7 @@ Before pushing changes to GitHub, check:
 git status
 
 Make sure no API-key files or other secrets are included.
+
 ---
 ## 🧪 Project Status
 
@@ -365,26 +379,27 @@ Active Development
 
 The project is currently under active development.
 
-Current Focus
-Dynamic model discovery
-Configurable agent roles
-Provider/model selection
-Multi-round discussion
-Chairman synthesis
-Provider failure handling
-Chairman fallback
-OpenRouter integration
-Planned / Future Development
-Agent-level fallback
-Parallel agent execution
-Cost tracking
-Persistent discussions
-Discussion export
-Custom user-defined roles
-Model capability comparison
-Model cost comparison
-Improved discussion history and replay
-More sophisticated Chairman analysis
+1. Current Focus
+2. Dynamic model discovery
+3. Configurable agent roles
+4. Provider/model selection
+5. Multi-round discussion
+6. Chairman synthesis
+7. Provider failure handling
+8. Chairman fallback
+9. OpenRouter integration
+10. Planned / Future Development
+11. Agent-level fallback
+12. Parallel agent execution
+13. Cost tracking
+14. Persistent discussions
+15. Discussion export
+16. Custom user-defined roles
+17. Model capability comparison
+18. Model cost comparison
+19. Improved discussion history and replay
+20. More sophisticated Chairman analysis
+
 ---
 ## 📖 Documentation
 
@@ -395,6 +410,7 @@ Read the Project Description
 For Python dependencies:
 
 View Requirements
+
 ---
 ## 🧠 Design Philosophy
 
@@ -430,6 +446,7 @@ Alternative interpretations
 Unresolved uncertainty
 
 before the final synthesis is produced.
+
 ---
 ## ⚠️ Disclaimer
 
